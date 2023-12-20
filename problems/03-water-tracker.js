@@ -10,29 +10,32 @@ you drank at least one cup of water.
 A calendar is represented by multiple weeks, 
 [[0, 0, 3, 1, 0, 4, 0], [1, 2, 1, 2, 1, 3, 1]].
 
-If you drank water for at least 4 days for every week in the calendar,
+If you dra nk water for at least 4 days for every week in the calendar,
 then return true. Otherwise, return false.
 
 
 */
 
 function adequateWaterTracker(calendar) {
-  let noWater = 0;
-  let water = 0;
+  debugger;
   for (let i = 0; i < calendar.length; i++) {
+    let noWater = 0;
+    let water = 0;
     const week = calendar[i];
     for (let j = 0; j < week.length - 1; j++) {
-      const date = calendar[j]
-      if (day === 0) {
+      const date = calendar[i][j]
+      if (date === 0) {
         noWater++;
       } else {
         water++;
       }
     }
+    if (water < 4) return false;
   }
-  return noWater < water;
+  return true;
+ 
 }
-
+debugger;
 const calendar1 = [
   [0, 0, 3, 1, 0, 4, 0],
   [1, 2, 1, 2, 1, 3, 1],

@@ -6,11 +6,16 @@ of foods that you have fed that pet.
 
 
 */
-
+debugger;
 function feedPet(name) {
   const foods = [];
+  
   return (food) => {
-    return "Fed " + name + " " + foods.push(food) + ".";
+    debugger
+    foods.push(food)
+    
+    return "Fed " + name + " " + foods.join(', ') + ".";
+   
   }
 }
 
